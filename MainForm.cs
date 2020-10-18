@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace MVRConfig
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox4.SelectedIndex)
+            {
+                case 0: this.lan
+            }
         }
     }
 }
