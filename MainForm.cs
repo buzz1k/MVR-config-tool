@@ -26,9 +26,9 @@ namespace MVRConfig
         private void button1_Click(object sender, EventArgs e)
         {
             SaveFileDialog s1 = new SaveFileDialog();
-            s1.Filter = "INI file | *.ini";
+            s1.Filter = "INI File | *.ini";
 
-            if (s1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (s1.ShowDialog() == DialogResult.OK)
             { 
 
             }
