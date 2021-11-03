@@ -12,6 +12,8 @@ namespace MVRConfig
 {
     public partial class MainForm : Form
     {
+        public string[] deviceSettings;
+
         public MainForm()
         {
             InitializeComponent();
@@ -19,6 +21,18 @@ namespace MVRConfig
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog s1 = new SaveFileDialog();
+            s1.Filter = "INI file | *.ini";
+
+            if (s1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            { 
+
+            }
+
         }
     }
 }
