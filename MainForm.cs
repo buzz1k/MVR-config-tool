@@ -34,5 +34,15 @@ namespace MVRConfig
             }
 
         }
+
+        private void timeCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            timeGroup.Enabled = timeCheck.Checked;
+        }
+
+        private void powerCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            powerGroup.Enabled = powerCheck.Checked;
+        }
     }
 }

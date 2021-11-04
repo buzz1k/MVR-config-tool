@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.timeGroup = new System.Windows.Forms.GroupBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.powerGroup = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.timeCheck = new System.Windows.Forms.CheckBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.powerCheck = new System.Windows.Forms.CheckBox();
+            this.timeGroup.SuspendLayout();
+            this.powerGroup.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // timeGroup
             // 
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
+            this.timeGroup.Controls.Add(this.comboBox3);
+            this.timeGroup.Controls.Add(this.comboBox2);
+            this.timeGroup.Controls.Add(this.comboBox1);
+            this.timeGroup.Controls.Add(this.label3);
+            this.timeGroup.Controls.Add(this.label2);
+            this.timeGroup.Controls.Add(this.label1);
+            resources.ApplyResources(this.timeGroup, "timeGroup");
+            this.timeGroup.Name = "timeGroup";
+            this.timeGroup.TabStop = false;
             // 
             // comboBox3
             // 
@@ -106,19 +106,12 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // groupBox2
+            // powerGroup
             // 
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.label5);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // checkBox2
-            // 
-            resources.ApplyResources(this.checkBox2, "checkBox2");
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.powerGroup.Controls.Add(this.label5);
+            resources.ApplyResources(this.powerGroup, "powerGroup");
+            this.powerGroup.Name = "powerGroup";
+            this.powerGroup.TabStop = false;
             // 
             // label5
             // 
@@ -138,26 +131,35 @@
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // timeCheck
             // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.timeCheck, "timeCheck");
+            this.timeCheck.Name = "timeCheck";
+            this.timeCheck.UseVisualStyleBackColor = true;
+            this.timeCheck.CheckedChanged += new System.EventHandler(this.timeCheck_CheckedChanged);
+            // 
+            // powerCheck
+            // 
+            resources.ApplyResources(this.powerCheck, "powerCheck");
+            this.powerCheck.Name = "powerCheck";
+            this.powerCheck.UseVisualStyleBackColor = true;
+            this.powerCheck.CheckedChanged += new System.EventHandler(this.powerCheck_CheckedChanged);
             // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.powerCheck);
+            this.Controls.Add(this.timeCheck);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.powerGroup);
+            this.Controls.Add(this.timeGroup);
             this.Name = "MainForm";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.timeGroup.ResumeLayout(false);
+            this.timeGroup.PerformLayout();
+            this.powerGroup.ResumeLayout(false);
+            this.powerGroup.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,20 +167,20 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox timeGroup;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox powerGroup;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox timeCheck;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.CheckBox powerCheck;
     }
 }
 
